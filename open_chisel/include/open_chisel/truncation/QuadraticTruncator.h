@@ -22,6 +22,8 @@
 #ifndef QUADRATICTRUNCATOR_H_
 #define QUADRATICTRUNCATOR_H_
 
+#include <boost/smart_ptr.hpp>
+
 namespace chisel
 {
 
@@ -63,8 +65,8 @@ namespace chisel
             float scalingFactor;
 
     };
-    typedef std::shared_ptr<QuadraticTruncator> QuadraticTruncatorPtr;
-    typedef std::shared_ptr<const QuadraticTruncator> QuadraticTruncatorConstPtr;
+    typedef boost::shared_ptr<QuadraticTruncator> QuadraticTruncatorPtr;
+    typedef boost::shared_ptr<const QuadraticTruncator> QuadraticTruncatorConstPtr;
 
 } // namespace chisel 
 

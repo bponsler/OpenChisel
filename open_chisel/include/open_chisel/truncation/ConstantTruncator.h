@@ -23,6 +23,7 @@
 #define CONSTANTTRUNCATOR_H_
 
 #include "Truncator.h"
+#include <boost/smart_ptr.hpp>
 
 namespace chisel
 {
@@ -54,8 +55,8 @@ namespace chisel
             float truncationDistance;
 
     };
-    typedef std::shared_ptr<ConstantTruncator> ConstantTruncatorPtr;
-    typedef std::shared_ptr<const ConstantTruncator> ConstantTruncatorConstPtr;
+    typedef boost::shared_ptr<ConstantTruncator> ConstantTruncatorPtr;
+    typedef boost::shared_ptr<const ConstantTruncator> ConstantTruncatorConstPtr;
 
 } // namespace chisel 
 

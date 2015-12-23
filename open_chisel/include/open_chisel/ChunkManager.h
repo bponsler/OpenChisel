@@ -173,8 +173,8 @@ namespace chisel
             bool useColor;
     };
 
-    typedef std::shared_ptr<ChunkManager> ChunkManagerPtr;
-    typedef std::shared_ptr<const ChunkManager> ChunkManagerConstPtr;
+    typedef boost::shared_ptr<ChunkManager> ChunkManagerPtr;
+    typedef boost::shared_ptr<const ChunkManager> ChunkManagerConstPtr;
 
 
 } // namespace chisel 

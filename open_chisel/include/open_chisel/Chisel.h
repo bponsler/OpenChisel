@@ -47,7 +47,7 @@ namespace chisel
 
             void IntegratePointCloud(const ProjectionIntegrator& integrator, const PointCloud& cloud, const Transform& extrinsic, float truncation, float maxDist);
 
-            template <class DataType> void IntegrateDepthScan(const ProjectionIntegrator& integrator, const std::shared_ptr<const DepthImage<DataType> >& depthImage, const Transform& extrinsic, const PinholeCamera& camera)
+            template <class DataType> void IntegrateDepthScan(const ProjectionIntegrator& integrator, const boost::shared_ptr<const DepthImage<DataType> >& depthImage, const Transform& extrinsic, const PinholeCamera& camera)
             {
                     printf("CHISEL: Integrating a scan\n");
                     Frustum frustum;
@@ -101,7 +101,7 @@ namespace chisel
                     //chunkManager.PrintMemoryStatistics();
             }
 
-            template <class DataType, class ColorType> void IntegrateDepthScanColor(const ProjectionIntegrator& integrator, const std::shared_ptr<const DepthImage<DataType> >& depthImage,  const Transform& depthExtrinsic, const PinholeCamera& depthCamera, const std::shared_ptr<const ColorImage<ColorType> >& colorImage, const Transform& colorExtrinsic, const PinholeCamera& colorCamera)
+            template <class DataType, class ColorType> void IntegrateDepthScanColor(const ProjectionIntegrator& integrator, const boost::shared_ptr<const DepthImage<DataType> >& depthImage,  const Transform& depthExtrinsic, const PinholeCamera& depthCamera, const boost::shared_ptr<const ColorImage<ColorType> >& colorImage, const Transform& colorExtrinsic, const PinholeCamera& colorCamera)
             {
                     Frustum frustum;
                     depthCamera.SetupFrustum(depthExtrinsic, &frustum);
@@ -168,8 +168,8 @@ namespace chisel
             ChunkSet meshesToUpdate;
 
     };
-    typedef std::shared_ptr<Chisel> ChiselPtr;
-    typedef std::shared_ptr<const Chisel> ChiselConstPtr;
+    typedef boost::shared_ptr<Chisel> ChiselPtr;
+    typedef boost::shared_ptr<const Chisel> ChiselConstPtr;
 
 } // namespace chisel 
 

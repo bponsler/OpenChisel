@@ -22,6 +22,8 @@
 #ifndef TRUNCATOR_H_
 #define TRUNCATOR_H_
 
+#include <boost/smart_ptr.hpp>
+
 namespace chisel
 {
 
@@ -37,8 +39,8 @@ namespace chisel
             virtual float GetTruncationDistance(float depthReading) const = 0;
     };
 
-    typedef std::shared_ptr<Truncator> TruncatorPtr;
-    typedef std::shared_ptr<const Truncator> TruncatorConstPtr;
+    typedef boost::shared_ptr<Truncator> TruncatorPtr;
+    typedef boost::shared_ptr<const Truncator> TruncatorConstPtr;
 } // namespace chisel 
 
 #endif // TRUNCATOR_H_ 

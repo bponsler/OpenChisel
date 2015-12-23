@@ -23,6 +23,7 @@
 #define CONSTANTWEIGHTER_H_
 
 #include "Weighter.h"
+#include <boost/smart_ptr.hpp>
 
 namespace chisel
 {
@@ -49,8 +50,8 @@ namespace chisel
             float weight;
 
     };
-    typedef std::shared_ptr<ConstantWeighter> ConstantWeighterPtr;
-    typedef std::shared_ptr<const ConstantWeighter> ConstantWeighterConstPtr;
+    typedef boost::shared_ptr<ConstantWeighter> ConstantWeighterPtr;
+    typedef boost::shared_ptr<const ConstantWeighter> ConstantWeighterConstPtr;
 
 } // namespace chisel 
 
