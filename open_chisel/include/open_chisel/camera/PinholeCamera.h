@@ -66,8 +66,8 @@ namespace chisel
             float farPlane;
 
     };
-    typedef std::shared_ptr<PinholeCamera> PinholeCameraPtr;
-    typedef std::shared_ptr<const PinholeCamera> PinholeCameraConstPtr;
+    typedef boost::shared_ptr<PinholeCamera> PinholeCameraPtr;
+    typedef boost::shared_ptr<const PinholeCamera> PinholeCameraConstPtr;
 
 } // namespace chisel 
 

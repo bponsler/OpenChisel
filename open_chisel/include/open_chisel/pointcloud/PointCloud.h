@@ -25,6 +25,7 @@
 #include <memory>
 #include <vector>
 #include <open_chisel/geometry/Geometry.h>
+#include <boost/smart_ptr.hpp>
 
 namespace chisel
 {
@@ -73,8 +74,8 @@ namespace chisel
             Vec3List points;
             Vec3List colors;
     };
-    typedef std::shared_ptr<PointCloud> PointCloudPtr;
-    typedef std::shared_ptr<const PointCloud> PointCloudConstPtr;
+    typedef boost::shared_ptr<PointCloud> PointCloudPtr;
+    typedef boost::shared_ptr<const PointCloud> PointCloudConstPtr;
 
 } // namespace chisel 
 

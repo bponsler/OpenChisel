@@ -139,8 +139,8 @@ namespace chisel
 
     };
 
-    typedef std::shared_ptr<Chunk> ChunkPtr;
-    typedef std::shared_ptr<const Chunk> ChunkConstPtr;
+    typedef boost::shared_ptr<Chunk> ChunkPtr;
+    typedef boost::shared_ptr<const Chunk> ChunkConstPtr;
     typedef std::vector<ChunkID, Eigen::aligned_allocator<ChunkID> > ChunkIDList;
 
 } // namespace chisel 

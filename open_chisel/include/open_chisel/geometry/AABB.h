@@ -27,6 +27,7 @@
 
 #include "Geometry.h"
 #include "Plane.h"
+#include <boost/smart_ptr.hpp>
 
 namespace chisel
 {
@@ -71,8 +72,8 @@ namespace chisel
             Vec3 min;
             Vec3 max;
     };
-    typedef std::shared_ptr<AABB> AABBPtr;
-    typedef std::shared_ptr<const AABB> AABBConstPtr;
+    typedef boost::shared_ptr<AABB> AABBPtr;
+    typedef boost::shared_ptr<const AABB> AABBConstPtr;
 
 } // namespace chisel 
 
